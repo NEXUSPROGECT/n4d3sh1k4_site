@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My XP Portfolio</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <div class="viewport">
+      <div class="desktop" id="desktop">
+
+        <div id="loader" class="window" style="width:300px; height:80px; top:200px; left:calc(50% - 150px);">
+          <div class="title-bar" data-i18n="loader.title">Загрузка</div>
+          <div class="window-body" style="padding:5px;">
+            <span data-i18n="loader.loading">Загрузка ресурсов....</span>
+            
+            <progress id="progress" max="100" value="0" style="width:100%"></progress>
+          </div>
+        </div>
+
+        <!-- Desktop icon -->
+        <div class="desktop-icon" ondblclick="openWindow('projectsWindow')">
+          <img src="assets/icons/documents.png" />
+          <span data-i18n="desktop.projects">Projects</span>
+        </div>
+
+        <div class="desktop-icon" ondblclick="openWindow('profileWindow')">
+          <img src="assets/icons/аccount.png" />
+          <span data-i18n="desktop.profile">Profile</span>
+        </div>
+
+        <div class="desktop-icon" ondblclick="openWindow('aboutWindow')">
+          <img src="assets/icons/notepad.png" />
+          <span data-i18n="desktop.about">About.txt</span>
+        </div>
+
+        <!-- Profile window -->
+        <div class="window" id="profileWindow" data-title="Profile">
+          <div class="title-bar">
+            <div class="title-bar-text">
+              <span data-i18n="desktop.profile.bar">Profile</span>
+            </div>
+            <div class="title-bar-controls">
+              <button aria-label="Close" onclick="closeWindow('profileWindow')"></button>
+            </div>
+          </div>
+
+          <div class="window-body profile" >
+            <img src="assets/avatar.png" class="avatar">
+            <div>
+              <strong data-i18n="profile.name"></strong><br>
+              Software Engineer<br>
+              Java / Spring / Android<br><br>
+              <button onclick="window.open('https://github.com/you')">
+                GitHub
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- About (Notepad) window -->
+        <div class="window" id="aboutWindow" data-title="About.txt">
+          <div class="title-bar">
+            <div class="title-bar-text"><span data-i18n="desktop.about.bar">About.txt - Notepad</span></div>
+            <div class="title-bar-controls">
+              <button aria-label="Close" onclick="closeWindow('aboutWindow')"></button>
+            </div>
+          </div>
+
+          <div class="window-body notepad">
+            <span data-i18n="about.text"></span>
+          </div>
+        </div>
+
+        <!-- Projects window -->
+        <div class="window" id="projectsWindow" data-title="My Projects">
+          <div class="title-bar">
+            <div class="title-bar-text"><span data-i18n="desktop.projects.bar">My Projects</span></div>
+            <div class="title-bar-controls">
+              <button aria-label="Close" onclick="closeWindow('projectsWindow')"></button>
+            </div>
+          </div>
+
+          <div class="window-body">
+            <ul id="projectsList" class="projects"></ul>
+          </div>
+        </div>
+
+        <div class="taskbar">
+          <button class="start-button" onclick="toggleStart()"><span data-i18n="desktop.start"></span></button>
+          <div class="taskbar-windows" id="taskbarWindows"></div>
+          <div class="taskbar-clock" id="clock"></div>
+      </div>
+
+      </div>
+
+      
+
+
+      <div class="start-menu" id="startMenu">
+        <div class="start-header">Nexus Project</div>
+
+        <button onclick="openWindow('profileWindow')"><span data-i18n="desktop.profile"></span></button>
+        <button onclick="openWindow('aboutWindow')"><span data-i18n="desktop.about"></span></button>
+        <button onclick="openWindow('projectsWindow')"><span data-i18n="desktop.projects"></span></button>
+        <button onclick="switchLanguage('ru')">Русский</button>
+        <button onclick="switchLanguage('en')">English</button>
+        <hr>
+        <button onclick="window.open('https://github.com/i')">GitHub</button>
+      </div>
+  </div>
+  <script src="js/i18n.js"></script>
+  <script src="js/language-switcher.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/fakeload.js"></script>
+  <script src="js/XP-friendly_draggable.js"></script>
+  </body>
+</html>

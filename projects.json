@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Theatre Booking App",
+    "description": "Spring Boot + MySQL",
+    "url": "https://github.com/you/theatre-app",
+    "screenshots": [
+      "assets/projects/theatre/1.png",
+      "assets/projects/theatre/2.png",
+      "assets/projects/theatre/3.png"
+    ]
+  },
+  {
+    "title": "Android Counter App",
+    "description": "JWT, Room, Spring",
+    "url": "https://github.com/you/android-counter",
+    "screenshots": [
+      "assets/projects/theatre/1.png",
+      "assets/projects/theatre/2.png",
+      "assets/projects/theatre/3.png"
+    ]
+  },
+  {
+    "title": "Android Counter App",
+    "description": "JWT, Room, Spring",
+    "url": "https://github.com/you/android-counter",
+    "screenshots": [
+      "assets/projects/theatre/1.png",
+      "assets/projects/theatre/2.png",
+      "assets/projects/theatre/3.png"
+    ]
+  },
+  {
+    "title": "Android Counter App",
+    "description": "JWT, Room, Spring",
+    "url": "https://github.com/you/android-counter",
+    "screenshots": [
+      "assets/projects/theatre/1.png",
+      "assets/projects/theatre/2.png",
+      "assets/projects/theatre/3.png"
+    ]
+  }
+]

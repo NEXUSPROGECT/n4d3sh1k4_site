@@ -1,0 +1,14 @@
+{
+    "loader.loading": "Loading resources...",
+    "loader.title": "Loading",
+    "desktop.projects": "Projects",
+    "desktop.profile": "Profile",
+    "desktop.about": "About.txt",
+    "desktop.about.bar": "About.txt - Notepad",
+    "desktop.projects.bar": "My Projects",
+    "desktop.profile.bar": "Profile",
+    "desktop.start":"Start",
+    "profile.name":"Mihail Krivosheev",
+    "about.text":"Hi 👋 I'm a backend-focused developer who enjoys building clean andreliable systems."
+
+}
