@@ -5,6 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .window,
@@ -91,7 +92,6 @@ button {
 
 .window {
   position: absolute;
-  
 }
 
 .window-body {
@@ -102,22 +102,22 @@ button {
 #profileWindow {
   top: 40px;
   left: 160px;
-  width: 300px;
+  width: 307px;
   display: none
 }
 
 #aboutWindow {
   top: 40px;
-  left: 470px;
+  left: 479px;
   width: 380px;
   display: none
 }
 
 #projectsWindow {
-  top: 217px;
+  top: 255px;
   left: 160px;
   width: 700px;
-  height: 500px;
+  height: 450px;
   display: none
 }
 
@@ -147,14 +147,14 @@ button {
 }
 
 .avatar {
-  width: 102px;
-  height: 102px;
+  width: 152px;
+  height: 152px;
   border: 1px solid #000;
 }
 
 /* Notepad */
 .notepad {
-  background: rgb(0, 104, 223);
+  background: rgb(255, 255, 255);
   padding: 3px;
 }
 
@@ -182,6 +182,20 @@ button {
 .projects li:hover {
   background: #e0e0ff;
 }
+
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 .taskbar {
   position: absolute;

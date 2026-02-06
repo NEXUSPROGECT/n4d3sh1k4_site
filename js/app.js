@@ -122,11 +122,12 @@ fetch("projects.json")
   });
 
 const startMenu = document.getElementById("startMenu");
-
 function toggleStart() {
   startMenu.style.display =
     startMenu.style.display === "block" ? "none" : "block";
 }
+
+
 
 document.addEventListener("click", e => {
   if (!e.target.closest(".start-menu") &&
