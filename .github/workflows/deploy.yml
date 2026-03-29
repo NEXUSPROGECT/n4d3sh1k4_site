@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: nexusprogect/n4d3sh1k4_site_windows-xp-style
 
 jobs:
   build-and-push-image:
