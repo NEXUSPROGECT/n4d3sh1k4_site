@@ -72,5 +72,5 @@ jobs:
             docker rm my-portfolio-site || true
             
             # Запускаем новый контейнер
-            docker run -d --name my-portfolio-site -p 80:80 --restart unless-stopped ghcr.io/${{ env.IMAGE_NAME }}:main
+            docker run -d --name my-portfolio-site -p 8445:8445 --restart unless-stopped ghcr.io/${{ env.IMAGE_NAME }}:main
           EOF
