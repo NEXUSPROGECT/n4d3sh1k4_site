@@ -36,6 +36,11 @@
           <span data-i18n="desktop.about">About.txt</span>
         </div>
 
+        <div class="desktop-icon" ondblclick="window.open('https://github.com/NEXUSPROGECT')">
+          <img src="assets/icons/github.png" />
+          <span data-i18n="desktop.github">GitHub</span>
+        </div>
+
         <!-- Profile window -->
         <div class="window" id="profileWindow" data-title="Profile">
           <div class="title-bar">
@@ -111,8 +116,13 @@
         <button onclick="openWindow('profileWindow')"><span data-i18n="desktop.profile"></span></button>
         <button onclick="openWindow('aboutWindow')"><span data-i18n="desktop.about"></span></button>
         <button onclick="openWindow('projectsWindow')"><span data-i18n="desktop.projects"></span></button>
-        <button onclick="switchLanguage('ru')">Русский</button>
-        <button onclick="switchLanguage('en')">English</button>
+        <div class="start-menu-item has-submenu">
+          <button><span data-i18n="startmenu.language">Language ▶</span></button>
+          <div class="submenu">
+            <button onclick="switchLanguage('ru')">Русский</button>
+            <button onclick="switchLanguage('en')">English</button>
+          </div>
+        </div>
         <hr>
         <button onclick="window.open('https://github.com/NEXUSPROGECT')">GitHub</button>
       </div>

@@ -264,6 +264,17 @@ document.querySelectorAll(".window").forEach(win => {
   });
 });
 
+/* ---------- DESKTOP ICON SELECTION ---------- */
+document.getElementById("desktop").addEventListener("click", (e) => {
+  const icon = e.target.closest(".desktop-icon");
+  if (icon) {
+    document.querySelectorAll(".desktop-icon").forEach(i => i.classList.remove("selected"));
+    icon.classList.add("selected");
+  } else if (e.target.id === "desktop" || e.target.classList.contains("desktop")) {
+    document.querySelectorAll(".desktop-icon").forEach(i => i.classList.remove("selected"));
+  }
+});
+
 /* ---------- CLOCK ---------- */
 function updateClock() {
   const now = new Date();
