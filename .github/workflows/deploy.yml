@@ -61,6 +61,8 @@ jobs:
           host: ${{ secrets.SERVER_TAILSCALE_IP }}   # Имя сервера в сети Tailscale (то, что ты используешь после 'ssh пользователь@...')
           username: ${{ secrets.SERVER_USER }}       # Пользователь
           key: ${{ secrets.SERVER_SSH_KEY }}         # Приватный SSH ключ
+          passphrase: ""
+          debug: true
           script: |
             # Логинимся в GitHub Container Registry на сервере
             echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
