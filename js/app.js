@@ -5,8 +5,12 @@ const openWindows = new Map();
 /* ---------- HELPERS ---------- */
 function constrainWindowPosition(win) {
   // Skip if window is hidden
+  // Skip if window is hidden
   if (win.style.display === "none") return;
   
+  // Skip on mobile screens
+  if (window.innerWidth <= 768) return;
+
   const desktop = document.querySelector(".desktop");
   const padding = 10;
   const computedStyle = window.getComputedStyle(win);
