@@ -19,6 +19,7 @@
           } else {
             clearInterval(finish);
             document.getElementById('loader').style.display = 'none';
+            document.body.classList.add('loaded');
             openWindow('projectsWindow')
             openWindow('profileWindow')
             openWindow('aboutWindow')

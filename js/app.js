@@ -540,6 +540,18 @@ function initializeProjects(projects) {
         });
         thumbnail.classList.add("selected");
         showPreview(index);
+
+        // Auto-scroll on mobile
+        if (window.innerWidth <= 768) {
+          setTimeout(() => {
+            const previewEl = document.querySelector(".projects-preview");
+            if (previewEl) {
+              const yOffset = -20;
+              const y = previewEl.getBoundingClientRect().top + window.scrollY + yOffset;
+              window.scrollTo({top: y, behavior: 'smooth'});
+            }
+          }, 50);
+        }
       };
 
       list.appendChild(thumbnail);
